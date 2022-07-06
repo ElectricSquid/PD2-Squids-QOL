@@ -1,0 +1,17 @@
+{
+	"menu_title" : "Squids QOL",
+	"menu_desc" : "Settings and functions for the quality of life mod",
+
+	"common_yes": "Yes",
+	"common_no": "No",
+
+	"dialog_offshore_title": "Are you sure?",
+	"dialog_offshore_message": "This will put all of your spending cash into offshore, this cannot be undone with this mod",
+
+	"toggle_noheat_title" : "No Job Heat",
+	"toggle_noheat_desc" : "Disables the job heat penalty after doing the same heist multiple times in a row",
+	"button_cashToOffshore_title" : "Cash to Offshore",
+	"button_cashToOffshore_desc" : "Transfer spending cash to offshore, handy to use before going infamous",
+	"button_forceReady_title": "Force Ready Up",
+	"button_forceReady_desc": "Forces all players in the lobby to ready up and starts the heist"
+}

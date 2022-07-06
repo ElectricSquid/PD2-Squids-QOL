@@ -1,0 +1,64 @@
+{
+	"name": "Squids QOL",
+	"description": "A collection of quality of life improvements",
+	"author": "ElectricSquid",
+	"version": "0.2",
+	"priority": 10,
+    "pre_hooks": [
+		{
+            "hook_id": "lib/states/bootupstate",
+            "script_path": "classes/globals.lua"
+        },
+		{
+            "hook_id": "lib/states/bootupstate",
+            "script_path": "classes/tools.lua"
+        },
+		{
+            "hook_id": "lib/states/bootupstate",
+            "script_path": "classes/settings.lua"
+        }
+	],
+    "hooks" : [
+		{
+            "hook_id": "lib/states/bootupstate",
+            "script_path": "hooks/init.lua"
+        },
+		{
+            "hook_id": "lib/managers/menumanager",
+            "script_path": "menus/setup_menu.lua"
+        },
+		{
+            "hook_id": "lib/managers/jobmanager",
+            "script_path": "hooks/no_job_heat.lua"
+        }
+	],
+	"keybinds" : [
+        {
+            "keybind_id": "QOL_openMenu",
+            "name": "Open Menu",
+            "description": "Opens the QOL menu",
+            "script_path": "keybinds/open_menu.lua",
+            "run_in_menu": true,
+            "run_in_game": true,
+            "localized": false
+        },
+		{
+            "keybind_id": "QOL_restartMission",
+            "name": "Restart Mission",
+            "description": "Restarts the current mission on button press",
+            "script_path": "keybinds/job_restart.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": false
+        },
+		{
+            "keybind_id": "QOL_forceReady",
+            "name": "Force Ready Up",
+            "description": "Forces all players in a heist to ready up and start the mission",
+            "script_path": "keybinds/force_ready.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": false
+        }
+	]
+}

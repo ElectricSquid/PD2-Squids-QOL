@@ -1,0 +1,42 @@
+{
+	"menu_id" : "qol_menu_main",
+	"parent_menu_id" : "blt_options",
+	"title" : "menu_title",
+	"description" : "menu_desc",
+	"items" : [
+
+		{
+			"type": "toggle",
+			"id": "options_noheat",
+			"title": "toggle_noheat_title",
+			"description": "toggle_noheat_desc",
+			"callback": "callback_toggle_noheat",
+			"value": "noheat",
+			"default_value": false
+		},
+        {
+			"type": "divider",
+			"size": 16
+		},
+        {
+			"type": "button",
+			"id": "button_forceReady",
+			"title": "button_forceReady_title",
+			"description": "button_forceReady_desc",
+			"callback": "callback_button_forceReady"
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "button",
+			"id": "button_cashToOffshore",
+			"title": "button_cashToOffshore_title",
+			"description": "button_cashToOffshore_desc",
+			"callback": "callback_button_cashToOffshore"
+		}
+
+	]
+
+}
