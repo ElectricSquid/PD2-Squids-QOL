@@ -1,17 +1,24 @@
 -- cache the ModPath because sometimes it will use the path of a different mod later on
 local path = ModPath
+local locale_path = "localization/qol_menu/"
 
 -- Load our localization keys for our menu, and menu items.
-Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_SquidTrainerMenu", function( loc )
-	loc:load_localization_file( path .. "localization/qol_menu/en.txt")
+Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_QOLMenu", function( loc )
+	--loc:load_localization_file( path .. "localization/qol_menu/en.json")
+
+	local locale = BLT.Localization:get_language().language
+	local supported_locales = file.GetFiles(path .. locale_path)
+	locale = tools.inTable(locale, supported_locales) and locale or "en"
+
+	loc:load_localization_file(path .. locale_path .. locale .. ".json")
 end)
 
 -- Setup our menu callbacks, load our saved data, and build the menu from our json file.
-Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_SquidTrainerMenu", function( menu_manager )
+Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_QOLMenu", function( menu_manager )
 	-- ### Don't forget to add the variables to settings:Init()! ###
 
 	-- Setup our callbacks as defined in our item callback keys, and perform our logic on the data retrieved.
-	-- Main Menu (st_menu_main)
+	-- Main Menu (qol_menu_main)
 	MenuCallbackHandler.callback_toggle_noheat = function(self, item)
 		settings.data.noheat = (item:value() == "on" and true or false)
 		settings:Save()

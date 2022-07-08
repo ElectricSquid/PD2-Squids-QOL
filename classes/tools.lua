@@ -10,12 +10,20 @@ function tools.fileExists(dir, filename)
         if (list[i] == nil) then goto continue end
 
         if (list[i] == filename) then
-            -- log("[SquidTrainer] Found " .. filename .. " in " .. dir)
             return true
         end
 
         ::continue::
     end
 
+    return false
+end
+
+function tools.inTable(element, table)
+    for key, value in pairs(table) do
+        if value == element then
+            return true
+        end
+    end
     return false
 end

@@ -14,10 +14,13 @@ A payday 2 BLT mod that focuses on quality of life improvements
 ### Installation
 
 1. First you will need to download and install [SuperBLT](https://superblt.znix.xyz/) for this mod to work.
+
   - Click the `Latest Release DLL` to download a zip containing the DLL
   - Extract the zip and place the DLL into your Payday 2 folder (where `payday2_win32_release.exe` is)
   - Run the game so it can initialize all the required components
+
 2. Download the zip from the [releases section](https://github.com/ElectricSquid/PD2-Squids-QOL/releases) and extract the `SquidsQOL` folder into your `Payday 2/mods` folder so that the structure looks like this:
+
 ```
 Payday 2
 └─ mods  
@@ -41,7 +44,33 @@ Payday 2
             |    └─ setup_menu.lua
             └─ mod.txt
 ```
+
 3. Enjoy the mod
+
+### Localization Support
+
+If you'd like to submit translations for the mod you can clone the repo and copy the `en.json` files, rename them to a supported locale abbreviation (ex. `de` is german/deutsch), and translate the words on the right (they must stay inside double quotation marks). For example, `"common_yes": "Yes"` translated to german would be `"common_yes": "Ja"`.
+
+See the list of supported locales below:
+
+| Abbreviation | Language |
+| ------------ | -------- |
+| chs | Simplified Chinese |
+| cht | Traditional Chinese |
+| de | German |
+| en | English |
+| es | Spanish |
+| fr | French |
+| id | Indonesian |
+| it | Italian |
+| ja | Japanese |
+| ko | Korean |
+| nl | Dutch |
+| pl | Polish |
+| pt-br | Brazilian Portuguese |
+| ru | Russian |
+| sv | Swedish |
+| tr | Turkish |
 
 ### Developer Notes
 
